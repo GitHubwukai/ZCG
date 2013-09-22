@@ -10,6 +10,7 @@
 #import "DetailInfoViewController.h"
 #import "MapViewController.h"
 
+
 @interface DetailInfoViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @end
@@ -54,29 +55,8 @@
 	textArray_ = [[NSArray alloc] initWithArray:
 				  [allInfoArray_ objectAtIndex:3]];
 }
-/*
-- (id)initWithArrayName: (NSString *)arrayName
-{
-	self = [super init];
-	if (self) {
-		NSString *path = [[NSBundle mainBundle] pathForResource:@"detailInfo" ofType:@"plist"];
-		NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:path];
-		
-		allInfoArray_ = [[NSArray alloc]initWithArray:[dictionary objectForKey:arrayName]];
-	
-		title = [NSString stringWithString:[allInfoArray_ objectAtIndex:0]];
-		imageArray_ = [[NSArray alloc] initWithArray:
-					   [allInfoArray_ objectAtIndex:1]];
-		infoArray_ = [[NSArray alloc] initWithArray:
-					  [allInfoArray_ objectAtIndex:2]];
-		textArray_ = [[NSArray alloc] initWithArray:
-					  [allInfoArray_ objectAtIndex:3]];
-		
-	}
-	
-	return self;
-}
- */
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -116,8 +96,7 @@
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
 	}
-	//NSString *tempString = [NSString stringWithString:[infoArray_ objectAtIndex:indexPath.row]];
-	
+		
 	cell.textLabel.text = [infoArray_ objectAtIndex:indexPath.row];
 	
 	return cell;
@@ -127,19 +106,15 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	if (indexPath.row == 1) {
-		MapViewController *map = [[MapViewController alloc] init];
-		[self.navigationController pushViewController:map animated:YES];
+	//map
+		MapViewController *mapController = [[MapViewController alloc] init];
+		[self.navigationController pushViewController:mapController animated:YES];
 	}
 }
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
-
-- (void)setupPage
-{
-	
-}
 @end

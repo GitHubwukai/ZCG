@@ -7,12 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BMapKit.h"
+
 
 @class DDMenuController;
 @interface ZCGAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) DDMenuController *menuController;
-@property (strong, nonatomic) BMKMapManager* mapManager;
 @end

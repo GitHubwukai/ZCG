@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ZCGValueDelegate.h"
+
 @interface DetailInfoViewController : UIViewController<ZCGValueDelegate>
 {
 	NSString *_detailValue;

@@ -10,11 +10,13 @@
 #import "FeedController.h"
 #import "DDMenuController.h"
 #import "MainViewController.h"
+#import "MapViewController.h"
 
 @implementation LeftController
 {
 	NSArray *sectionArray;
 	NSArray *section1Info;
+	id controller;
 }
 @synthesize tableView=_tableView;
 
@@ -164,9 +166,18 @@
     
     // set the root controller
     DDMenuController *menuController = (DDMenuController*)((ZCGAppDelegate*)[[UIApplication sharedApplication] delegate]).menuController;
-    MainViewController *controller = [[MainViewController alloc] init];
+
 	
-    controller.title = [NSString stringWithString:[section1Info objectAtIndex:indexPath.row]];
+	if ((indexPath.section == 0) && (indexPath.row == 1)) {
+		controller = [[MainViewController alloc] init];
+	}
+	else if((indexPath.section ==0) && (indexPath.row == 2))
+	{
+	controller = [[MapViewController alloc] init];
+	}
+	
+	
+    //controller.title = [NSString stringWithString:[section1Info objectAtIndex:indexPath.row]];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
 
     [menuController setRootController:navController animated:YES];

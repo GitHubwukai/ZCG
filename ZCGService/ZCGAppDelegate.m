@@ -16,12 +16,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-	self.mapManager = [[BMKMapManager alloc] init];
 	
-	BOOL ret = [self.mapManager start:@"B3a632f1834d237a53b3b3855847432a" generalDelegate:nil];
-	if (!ret) {
-		NSLog(@"manager start failed!");
-	}
 	//主页面视图控制器
 	MainViewController *mainController = [[MainViewController alloc] init ];
 	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:mainController];
