@@ -61,6 +61,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+	self.title = title;
 	scrollView_ = [[UIScrollView alloc] initWithFrame:self.view.bounds];
 	
 	//image
@@ -69,12 +70,12 @@
 	imageView_.frame = CGRectMake(0, 0, 320, 160);
 	[scrollView_ addSubview:imageView_];
 	//table view
-	tablesView_ = [[UITableView alloc] initWithFrame:CGRectMake(0, 163, 320, 132) style:UITableViewStylePlain];
+	tablesView_ = [[UITableView alloc] initWithFrame:CGRectMake(0, 166, 320, 132) style:UITableViewStylePlain];
 	tablesView_.delegate = self;
 	tablesView_.dataSource = self;
 	[scrollView_ addSubview:tablesView_];
 //	textView_
-	textView_ = [[UITextView alloc] initWithFrame:CGRectMake(0, 295, 320, 305)];
+	textView_ = [[UITextView alloc] initWithFrame:CGRectMake(0, 305, 320, 305)];
 	textView_.backgroundColor = [UIColor orangeColor];
 	[scrollView_ addSubview:textView_];
 	
@@ -93,10 +94,13 @@
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
 	if (!cell) {
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
 	}
-		
+	if (indexPath.row<2) {
+		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+	}
+	cell.textLabel.font = [UIFont fontWithName:@"Arial" size:15];
 	cell.textLabel.text = [infoArray_ objectAtIndex:indexPath.row];
 	
 	return cell;
@@ -108,6 +112,8 @@
 	if (indexPath.row == 1) {
 	//map
 		MapViewController *mapController = [[MapViewController alloc] init];
+		self.locationDelegate = mapController;
+		[self.locationDelegate setValue:title];
 		[self.navigationController pushViewController:mapController animated:YES];
 	}
 }

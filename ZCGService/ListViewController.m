@@ -243,6 +243,9 @@
 	else if ([[listArray_ objectAtIndex:indexPath.row] count] == 4) {
 		NSLog(@"点这里");
 		PageIntroViewController *pageIntroController = [[PageIntroViewController alloc] init];
+		self.detailDelegate = pageIntroController;
+		[self.detailDelegate setValue:[[listArray_ objectAtIndex:indexPath.row]objectAtIndex:1]];
+		
 		[self.navigationController pushViewController:pageIntroController animated:YES];
 	}
 	else

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>千佛崖</key>
+	<array>
+		<array>
+			<string>qianfoya1.jpg</string>
+			<string>qianfoya1.jpg</string>
+			<string>qianfoya1.jpg</string>
+		</array>
+		<array>
+			<string>很美</string>
+			<string>很美</string>
+			<string>很美</string>
+		</array>
+	</array>
+	<key>天池</key>
+	<array>
+		<array>
+			<string>tianchi1.jpg</string>
+			<string>tianchi1.jpg</string>
+			<string>tianchi1.jpg</string>
+		</array>
+		<array>
+			<string>很美</string>
+			<string>很美</string>
+			<string>很美</string>
+		</array>
+	</array>
+</dict>
+</plist>

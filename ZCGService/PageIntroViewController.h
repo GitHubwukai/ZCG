@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZCGValueDelegate.h"
 
-@interface PageIntroViewController : UIViewController
+@interface PageIntroViewController : UIViewController<ZCGValueDelegate>
+{
+	NSString *_detailValue;
+}
+
+- (void)setValue:(NSString *)value;
 
 @end

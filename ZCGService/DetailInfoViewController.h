@@ -13,6 +13,6 @@
 {
 	NSString *_detailValue;
 }
-
+@property (nonatomic, strong) id<ZCGValueDelegate> locationDelegate;
 - (void)setValue:(NSString *)value;
 @end

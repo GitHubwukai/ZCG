@@ -34,93 +34,51 @@
 	</array>
 	<key>keyFood</key>
 	<dict>
-		<key>deliciousFood</key>
+		<key>淅川美食</key>
 		<array>
 			<string>xichuan delicious food</string>
 			<string>xichuan delicious foodxichuan delicious foodxichuan delicious foodxichuan delicious foodxichuan delicious foodxichuan delicious foodxichuan delicious food</string>
 		</array>
-		<key>goodidea</key>
+		<key>小吃店/饭店</key>
 		<array>
 			<array>
 				<string>back.png</string>
-				<string>千佛崖</string>
-				<string>景区</string>
-				<string>千佛崖123212212312312312312312\n千佛崖123212212312312312312312\n千佛崖123212212312312312312312</string>
+				<string>仓房镇</string>
+				<string>县城</string>
+				<string>在县城湘菜馆里数一数二，食材讲究，做法精细</string>
 				<string>foodNumOne</string>
 			</array>
 			<array>
 				<string>nav_menu_icon@2x.png</string>
-				<string>天池</string>
-				<string>景区</string>
-				<string>32347293479823479823</string>
+				<string>丹江野生鱼</string>
+				<string>县城</string>
+				<string>小店只有现做的野生鲜鱼汤和烙馍，鱼汤味美，鱼肉滑嫩，烙馍稣香，不用多说，吃了就知道</string>
 				<string>foodNumTwo</string>
 			</array>
 			<array>
 				<string>nav_menu_icon@2x.png</string>
-				<string>天池</string>
-				<string>景区</string>
-				<string>32347293479823479823</string>
+				<string>丹江国际宾馆</string>
+				<string>县城</string>
+				<string>集饮食、聚餐、住宿一体</string>
 				<string>foodNumThree</string>
 			</array>
 			<array>
 				<string>nav_menu_icon@2x.png</string>
-				<string>天池</string>
-				<string>景区</string>
-				<string>32347293479823479823</string>
+				<string>小肥羊</string>
+				<string>县城</string>
+				<string>这个就不多介绍了吧</string>
 				<string>foodNumFour</string>
-			</array>
-			<array>
-				<string>nav_menu_icon@2x.png</string>
-				<string>天池</string>
-				<string>景区</string>
-				<string>32347293479823479823</string>
-				<string>foodNumFive</string>
-			</array>
-			<array>
-				<string>nav_menu_icon@2x.png</string>
-				<string>天池</string>
-				<string>景区</string>
-				<string>32347293479823479823</string>
-				<string>foodNumSix</string>
-			</array>
-			<array>
-				<string>nav_menu_icon@2x.png</string>
-				<string>天池</string>
-				<string>景区</string>
-				<string>32347293479823479823</string>
-				<string>foodNumSeven</string>
-			</array>
-			<array>
-				<string>nav_menu_icon@2x.png</string>
-				<string>天池</string>
-				<string>景区</string>
-				<string>32347293479823479823</string>
-				<string>foodNumEight</string>
-			</array>
-			<array>
-				<string>nav_menu_icon@2x.png</string>
-				<string>天池</string>
-				<string>景区</string>
-				<string>32347293479823479823</string>
-				<string>foodNumNine</string>
-			</array>
-			<array>
-				<string>nav_menu_icon@2x.png</string>
-				<string>天池</string>
-				<string>景区</string>
-				<string>32347293479823479823</string>
-				<string>foodNumTen</string>
 			</array>
 		</array>
 	</dict>
 	<key>keyHotel</key>
 	<dict>
-		<key>introduct</key>
+		<key>旅途休息住宿</key>
 		<array>
 			<string>xichuan hotel</string>
 			<string>xichuan delicious foodxichuan delicious foodxichuan delicious foodxichuan delicious foodxichuan delicious foodxichuan delicious foodxichuan delicious food</string>
 		</array>
-		<key>list</key>
+		<key>住宿推荐</key>
 		<array>
 			<array>
 				<string>nav_menu_icon@2x.png</string>
@@ -196,66 +154,18 @@
 	</dict>
 	<key>keyInfo</key>
 	<dict>
-		<key>ticket</key>
+		<key>景区美景</key>
 		<array>
 			<string>介绍</string>
 			<string>1123212212312312312312312111111111111111111\n介绍1111111111111111111\n介绍1111111111111111111</string>
 		</array>
-		<key>point</key>
+		<key>景点</key>
 		<array>
 			<array>
 				<string>back.png</string>
 				<string>千佛崖</string>
 				<string>景区</string>
 				<string>千佛崖123212212312312312312312\n千佛崖123212212312312312312312\n千佛崖123212212312312312312312</string>
-			</array>
-			<array>
-				<string>nav_menu_icon@2x.png</string>
-				<string>天池</string>
-				<string>景区</string>
-				<string>32347293479823479823</string>
-			</array>
-			<array>
-				<string>nav_menu_icon@2x.png</string>
-				<string>天池</string>
-				<string>景区</string>
-				<string>32347293479823479823</string>
-			</array>
-			<array>
-				<string>nav_menu_icon@2x.png</string>
-				<string>天池</string>
-				<string>景区</string>
-				<string>32347293479823479823</string>
-			</array>
-			<array>
-				<string>nav_menu_icon@2x.png</string>
-				<string>天池</string>
-				<string>景区</string>
-				<string>32347293479823479823</string>
-			</array>
-			<array>
-				<string>nav_menu_icon@2x.png</string>
-				<string>天池</string>
-				<string>景区</string>
-				<string>32347293479823479823</string>
-			</array>
-			<array>
-				<string>nav_menu_icon@2x.png</string>
-				<string>天池</string>
-				<string>景区</string>
-				<string>32347293479823479823</string>
-			</array>
-			<array>
-				<string>nav_menu_icon@2x.png</string>
-				<string>天池</string>
-				<string>景区</string>
-				<string>32347293479823479823</string>
-			</array>
-			<array>
-				<string>nav_menu_icon@2x.png</string>
-				<string>天池</string>
-				<string>景区</string>
-				<string>32347293479823479823</string>
 			</array>
 			<array>
 				<string>nav_menu_icon@2x.png</string>

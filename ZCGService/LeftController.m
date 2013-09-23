@@ -11,7 +11,20 @@
 #import "DDMenuController.h"
 #import "MainViewController.h"
 #import "MapViewController.h"
+#import "JSON.h"
 
+@interface LeftController ()<NSURLConnectionDataDelegate, NSURLConnectionDelegate>
+{
+	NSString *outString;
+	NSString *city;
+	NSString *date;
+	NSMutableArray *tpArray;
+	NSMutableArray *weatherArray;
+	NSString *temp;
+	NSString *weather;
+	NSMutableArray *weekArray;
+}
+@end
 @implementation LeftController
 {
 	NSArray *sectionArray;
@@ -50,12 +63,24 @@
         [self.view addSubview:tableView];
         self.tableView = tableView;
     }
+	
+	//网络连接
+	NSString *pathURL = @"http://m.weather.com.cn/data/101180708.html";
+	NSURL *url = [NSURL URLWithString:pathURL];
+	
+	NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+	
+	NSURLConnection *connection = [[NSURLConnection alloc]
+								   initWithRequest:request delegate:self];
+
 }
 
 - (void)viewDidUnload {
     [super viewDidUnload];
     self.tableView = nil;
 }
+
+
 
 
 #pragma mark - UITableViewDataSource
@@ -65,7 +90,7 @@
 		return [section1Info count];
 	}
 	else if(section == 1)
-		return 5;
+		return 6;
 	else
 		return 1;
 }
@@ -87,9 +112,9 @@
     /* 
      * Content in this cell should be inset the size of kMenuOverlayWidth
      */
-	cell.contentView.backgroundColor = [UIColor redColor];
-	cell.textLabel.font = [UIFont systemFontOfSize:15];
-	cell.frame = CGRectMake(0, cell.frame.origin.y, 320, cell.frame.size.height);
+//	cell.contentView.backgroundColor = [UIColor redColor];
+//	cell.textLabel.font = [UIFont systemFontOfSize:15];
+//	cell.frame = CGRectMake(0, cell.frame.origin.y, 320, cell.frame.size.height);
     if (indexPath.section == 0) {
 		cell.textLabel.text = [section1Info objectAtIndex:indexPath.row];
 		cell.textLabel.textColor = [UIColor blueColor];
@@ -101,17 +126,31 @@
 		
 		}
 	else
-		cell.textLabel.text = [NSString stringWithFormat:@"%d", indexPath.row];
+		{
+		UIFont *font = [UIFont fontWithName:@"Arial" size:12];
+		UILabel *dataLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, 60, 30)];
+		dataLabel.font = font;
+		UILabel *weatherLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 10, 80, 30)];
+		weatherLabel.font =font;
+		UILabel *tpLabel = [[UILabel alloc] initWithFrame:CGRectMake(140, 10, 60, 30)];
+		tpLabel.font = font;
+		
+		NSInteger num = [self GetRecord];
+		
+		dataLabel.text = [weekArray objectAtIndex:(indexPath.row+num)%7];
+		weatherLabel.text = [weatherArray objectAtIndex:indexPath.row];
+		tpLabel.text = [tpArray objectAtIndex:indexPath.row];
+		
+		[cell.contentView addSubview:dataLabel];
+		[cell.contentView addSubview:weatherLabel];
+		[cell.contentView addSubview:tpLabel];
+		}
+
     return cell;
     
 }
 
-//- (NSString*)tableView:(UITableView*)tableView titleForHeaderInSection:(NSInteger)section {
-//	
-//    NSString *string = [[NSString alloc]init];
-//	string = [sectionArray objectAtIndex:section];
-//	return string;
-//}
+
 
 #pragma mark - UITableViewDelegate
 
@@ -122,11 +161,8 @@
 	}
 	else
 	{
-		UILabel *sectionLabel = [[UILabel alloc] init];
-		NSString *string = [[NSString alloc] init];
-		string = [sectionArray objectAtIndex:section];
-		
-		sectionLabel = [self costumLabel:string andFont:@"Helvetica-Bold" andSizeL:15];
+		NSString *string = [NSString stringWithString:[sectionArray objectAtIndex:section]];
+		UILabel * sectionLabel = [self costumLabel:string andFont:@"Helvetica-Bold" andSizeL:15];
 		
 		CGRect frame = sectionLabel.frame;
 		sectionLabel.frame = CGRectMake(12, 8, frame.size.width, frame.size.height);
@@ -207,6 +243,82 @@
 	label.frame = labelRect;
 	
 	return label;
+}
+
+//json解析
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+	outString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+}
+
+- (void) connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+	NSLog(@"failed");
+}
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+	NSMutableDictionary *jsonDic = [outString JSONValue];
+	NSMutableDictionary *jsonSubDic = [jsonDic objectForKey:@"weatherinfo"];
+	
+	city = [[NSString alloc] initWithFormat:@"%@",[jsonSubDic objectForKey:@"city"] ];
+	date = [[NSString alloc] initWithFormat:@"%@", [jsonSubDic objectForKey:@"date_y"]];
+	//	temp = [[NSString alloc] initWithFormat:@"%@", [jsonSubDic objectForKey:@"temp1"] ];
+	NSString * tempJsonName = [[NSString alloc] initWithFormat:@"temp"];
+	NSString * weathertempName = [[NSString alloc] initWithFormat:@"weather"];
+	weatherArray = [[NSMutableArray alloc] initWithCapacity:6];
+	tpArray = [[NSMutableArray alloc] initWithCapacity:6];
+	
+	NSString *tempName = [[NSString alloc] init];
+	NSString *weatherName = [[NSString alloc] init];
+	for (int i = 1; i <=6; i++) {
+		tempName = [tempJsonName stringByAppendingString:[NSString stringWithFormat:@"%d", i]];
+		//NSLog(@"%@", tempName);
+		weatherName = [weathertempName stringByAppendingString:[NSString stringWithFormat:@"%d", i]];
+		
+		
+		weather = [[NSString alloc] initWithFormat:@"%@", [jsonSubDic objectForKey:weatherName]];
+		temp = [[NSString alloc] initWithFormat:@"%@", [jsonSubDic objectForKey:tempName] ];
+		NSLog(@"%@", weather);
+		[tpArray addObject:temp];
+		[weatherArray addObject:weather];
+	}
+	NSLog(@"%@\n%@\n", city, date);
+	[self.tableView reloadData];
+	[self GetRecord];
+}
+
+//返回星期
+
+-(NSInteger )GetRecord         //这一部分是用于点击END按钮后在小画板上显示的
+{
+    weekArray = [[NSMutableArray alloc]initWithCapacity:7];
+    [weekArray addObject:@"星期日"];
+    [weekArray addObject:@"星期一"];
+    [weekArray addObject:@"星期二"];
+    [weekArray addObject:@"星期三"];
+    [weekArray addObject:@"星期四"];
+    [weekArray addObject:@"星期五"];
+    [weekArray addObject:@"星期六"];
+    //创建日历
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+	//获取当前时间
+	NSDate *now;
+	
+    NSDateComponents *comps = [[NSDateComponents alloc] init];
+    NSInteger unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekdayCalendarUnit |
+    NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+    now=[NSDate date];
+    comps = [calendar components:unitFlags fromDate:now];
+	//获取时间
+	//   NSInteger year = [comps year];
+	//   NSInteger month = [comps month];
+	//   NSInteger day = [comps day];
+    NSInteger week = [comps weekday]-1;
+	//   NSInteger hour = [comps hour];
+	//   NSInteger min = [comps minute];
+	return week;
+	
 }
 
 

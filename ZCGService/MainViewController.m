@@ -53,7 +53,7 @@
 	self.scrollView = [[UIScrollView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 	self.scrollView.backgroundColor = [UIColor whiteColor];
 	
-	NSString *menuContent = [[NSString alloc] init];
+//	NSString *menuContent = [[NSString alloc] init];
 	int menuid = 0;
 	NSInteger tagg = 1;
 	//creat button
@@ -63,7 +63,7 @@
 			button.backgroundColor = [UIColor colorWithPatternImage:[UIImage
 																	 imageNamed:@"iconbg.png"]];
 			button.frame = CGRectMake((30+row*140), (20+128*n), 122, 108);
-			menuContent = [menuInfo objectAtIndex:menuid];
+			NSString *menuContent = [menuInfo objectAtIndex:menuid];
 			
 			UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
 			//label大小自适应

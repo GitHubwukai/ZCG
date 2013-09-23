@@ -14,6 +14,8 @@
 
 @interface MapViewController () <MKMapViewDelegate>{
 	NSMutableArray *_stations;
+	NSArray *allStationOrStations;
+	NSDictionary *stationDictionary_;
 }
 
 typedef NS_ENUM(NSInteger, RWMapMode) {
@@ -38,6 +40,18 @@ typedef NS_ENUM(NSInteger, RWMapMode) {
     }
     return self;
 }
+
+- (void)setValue:(NSString *)value
+{
+	if (value) {
+	_value = value;
+	NSLog(@"%@", _value);
+	}
+	else{
+		_value = nil;
+	}
+}
+
  -(void)loadData
 {
 	NSData *data = [NSData dataWithContentsOfFile:
@@ -49,18 +63,32 @@ typedef NS_ENUM(NSInteger, RWMapMode) {
 	NSUInteger stationCount = stationData.count;
 	
 	_stations = [[NSMutableArray alloc] initWithCapacity:stationCount];
-	for (NSDictionary *stationDictionary in stationData) {
-		CLLocationDegrees latitude = [[stationDictionary objectForKey:@"latitude"] doubleValue];
-		CLLocationDegrees longitude = [[stationDictionary objectForKey:@"longitude"] doubleValue];
+	for (stationDictionary_ in stationData) {
+		CLLocationDegrees latitude = [[stationDictionary_ objectForKey:@"latitude"] doubleValue];
+		CLLocationDegrees longitude = [[stationDictionary_ objectForKey:@"longitude"] doubleValue];
 		
 		CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(latitude, longitude);
 		
 		RWStation *station = [[RWStation alloc] init];
-		station.title = [stationDictionary objectForKey:@"name"];
+		station.title = [stationDictionary_ objectForKey:@"name"];
 		station.coordinate = coordinate;
 		[_stations addObject:station];
 	}
 	
+	if (_value) {
+	for(RWStation *station in _stations) {
+		if ([station.title isEqualToString:_value]) {
+			allStationOrStations = [[NSArray alloc] initWithObjects:station, nil];
+			}
+		else
+			{
+			
+			}
+		}
+
+	}
+	else
+		allStationOrStations = _stations;
 }
 
 - (void)setMapMode:(RWMapMode)mapMode {
@@ -68,7 +96,7 @@ typedef NS_ENUM(NSInteger, RWMapMode) {
     
     switch (mapMode) {
         case RWMapModeNormal: {
-			[self.mapView addAnnotations:_stations];
+			[self.mapView addAnnotations:allStationOrStations];
         }
             break;
         case RWMapModeLoading: {
@@ -121,6 +149,7 @@ typedef NS_ENUM(NSInteger, RWMapMode) {
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+	_value = nil;
 }
 
 @end
