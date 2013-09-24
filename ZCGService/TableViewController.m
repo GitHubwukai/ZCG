@@ -21,6 +21,15 @@
 {
 	CGFloat cellHeight_;
 	NSArray *allInfoArray;
+	NSString *_key;
+}
+
+- (void)setValue:(NSString *)value
+{
+	_key = value;
+	NSString *path = [[NSBundle mainBundle] pathForResource:@"Menu" ofType:@"plist"];
+	NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:path];
+	allInfoArray = [[NSArray alloc] initWithArray:[dictionary objectForKey:_key]];
 }
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,9 +37,7 @@
     if (self) {
         // Custom initialization
 		self.title = @"交通";
-		NSString *path = [[NSBundle mainBundle] pathForResource:@"Menu" ofType:@"plist"];
-		NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:path];
-		allInfoArray = [[NSArray alloc] initWithArray:[dictionary objectForKey:@"traffic"]];
+
     }
     return self;
 }

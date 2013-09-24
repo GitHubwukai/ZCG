@@ -1,4 +1,4 @@
-//
+
 //  MainViewController.m
 //  DDMenuController
 //
@@ -12,6 +12,7 @@
 #import "IntroViewController.h"
 #import "ListViewController.h"
 #import "TableViewController.h"
+#import "ZCGMapViewController.h"
 
 @interface MainViewController () 
 @property (nonatomic, strong) UIScrollView *scrollView;
@@ -130,6 +131,12 @@
 		[self.valueDelegate setValue:@"keyFood"];
 		[self.navigationController pushViewController:listController animated:YES];
 	}
+	if (button.tag == 4) {
+		
+		ZCGMapViewController *mapViewController = [[ZCGMapViewController alloc]init];
+		
+		[self.navigationController pushViewController:mapViewController animated:YES];
+	}
 	if (button.tag == 5) {
 
 		ListViewController *listController = [[ListViewController alloc] init];
@@ -139,10 +146,14 @@
 	}
 	if (button.tag == 6) {
 		TableViewController *tableController = [[TableViewController alloc] init];
+		self.valueDelegate = tableController;
+		[self.valueDelegate setValue:@"traffic"];
 		[self.navigationController pushViewController:tableController animated:YES];
 	}
 	if (button.tag == 7) {
 		TableViewController *tableController = [[TableViewController alloc] init];
+		self.valueDelegate = tableController;
+		[self.valueDelegate setValue:@"recommendation"];
 		[self.navigationController pushViewController:tableController animated:YES];
 	}
 	if (button.tag == 8) {

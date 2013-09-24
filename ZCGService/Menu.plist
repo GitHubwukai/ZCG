@@ -2,6 +2,21 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>recommendation</key>
+	<array>
+		<array>
+			<string>自助游</string>
+			<string>坐车到淅川后，在淅川客运汽车站乘坐到仓房镇的客车，到站后乘坐小三轮到坐禅谷景区</string>
+		</array>
+		<array>
+			<string>自驾游</string>
+			<string>1、淅川方向走s335至马蹬镇，从石桥轮渡过丹江后到坐禅谷\n2，淅川方向走s335至香花镇宋岗码头，乘轮渡至下寺码头再到坐禅谷</string>
+		</array>
+		<array>
+			<string>组团旅行</string>
+			<string>组团旅行请联系景区或当地旅行社</string>
+		</array>
+	</array>
 	<key>traffic</key>
 	<array>
 		<array>
@@ -17,14 +32,12 @@
 			<string>旅游旺季南阳市到坐禅谷的客车每天都有，早上发车，下午返回南阳，适合自助游的游客，客车位于商城汽车站内，请咨询商场汽车站：03776900001</string>
 		</array>
 	</array>
-	<key>New item</key>
-	<string>listHotel</string>
 	<key>menu</key>
 	<array>
 		<string>简介</string>
 		<string>景点</string>
 		<string>特色美食</string>
-		<string>票务信息</string>
+		<string>景区地图</string>
 		<string>住宿</string>
 		<string>交通</string>
 		<string>推荐路线</string>
@@ -34,144 +47,67 @@
 	</array>
 	<key>keyFood</key>
 	<dict>
-		<key>淅川美食</key>
+		<key> 淅川美食</key>
 		<array>
-			<string>xichuan delicious food</string>
+			<string></string>
 			<string>xichuan delicious foodxichuan delicious foodxichuan delicious foodxichuan delicious foodxichuan delicious foodxichuan delicious foodxichuan delicious food</string>
 		</array>
-		<key>小吃店/饭店</key>
+		<key> 小吃/饭店</key>
 		<array>
 			<array>
-				<string>back.png</string>
-				<string>仓房镇</string>
-				<string>县城</string>
-				<string>在县城湘菜馆里数一数二，食材讲究，做法精细</string>
-				<string>foodNumOne</string>
-			</array>
-			<array>
-				<string>nav_menu_icon@2x.png</string>
+				<string>danjiangyuyan.jpg</string>
 				<string>丹江野生鱼</string>
 				<string>县城</string>
-				<string>小店只有现做的野生鲜鱼汤和烙馍，鱼汤味美，鱼肉滑嫩，烙馍稣香，不用多说，吃了就知道</string>
+				<string>小店只有现做的野生鲜鱼汤和烙馍，鱼汤味美，鱼肉滑嫩，烙馍稣香，吃过朋友都说好</string>
 				<string>foodNumTwo</string>
 			</array>
 			<array>
-				<string>nav_menu_icon@2x.png</string>
+				<string>danjiangguoji.jpg</string>
 				<string>丹江国际宾馆</string>
 				<string>县城</string>
 				<string>集饮食、聚餐、住宿一体</string>
 				<string>foodNumThree</string>
 			</array>
-			<array>
-				<string>nav_menu_icon@2x.png</string>
-				<string>小肥羊</string>
-				<string>县城</string>
-				<string>这个就不多介绍了吧</string>
-				<string>foodNumFour</string>
-			</array>
 		</array>
 	</dict>
 	<key>keyHotel</key>
 	<dict>
-		<key>旅途休息住宿</key>
+		<key> 旅途休息住宿</key>
 		<array>
-			<string>xichuan hotel</string>
-			<string>xichuan delicious foodxichuan delicious foodxichuan delicious foodxichuan delicious foodxichuan delicious foodxichuan delicious foodxichuan delicious food</string>
+			<string></string>
+			<string>住宿介绍，酒店介绍，客栈介绍</string>
 		</array>
-		<key>住宿推荐</key>
+		<key> 住宿推荐</key>
 		<array>
 			<array>
-				<string>nav_menu_icon@2x.png</string>
-				<string>千佛崖</string>
-				<string>景区</string>
-				<string>千佛崖123212212312312312312312\n千佛崖123212212312312312312312\n千佛崖123212212312312312312312</string>
-				<string>foodNumOne</string>
-			</array>
-			<array>
-				<string>nav_menu_icon@2x.png</string>
-				<string>天池</string>
-				<string>景区</string>
-				<string>32347293479823479823</string>
-				<string>foodNumTwo</string>
-			</array>
-			<array>
-				<string>nav_menu_icon@2x.png</string>
-				<string>天池</string>
-				<string>景区</string>
-				<string>32347293479823479823</string>
+				<string>danjiangguoji.jpg</string>
+				<string>丹江国际宾馆</string>
+				<string>县城</string>
+				<string>集饮食、聚餐、住宿一体</string>
 				<string>foodNumThree</string>
-			</array>
-			<array>
-				<string>nav_menu_icon@2x.png</string>
-				<string>天池</string>
-				<string>景区</string>
-				<string>32347293479823479823</string>
-				<string>foodNumFour</string>
-			</array>
-			<array>
-				<string>nav_menu_icon@2x.png</string>
-				<string>天池</string>
-				<string>景区</string>
-				<string>32347293479823479823</string>
-				<string>foodNumFive</string>
-			</array>
-			<array>
-				<string>nav_menu_icon@2x.png</string>
-				<string>天池</string>
-				<string>景区</string>
-				<string>32347293479823479823</string>
-				<string>foodNumSix</string>
-			</array>
-			<array>
-				<string>nav_menu_icon@2x.png</string>
-				<string>天池</string>
-				<string>景区</string>
-				<string>32347293479823479823</string>
-				<string>foodNumSeven</string>
-			</array>
-			<array>
-				<string>nav_menu_icon@2x.png</string>
-				<string>天池</string>
-				<string>景区</string>
-				<string>32347293479823479823</string>
-				<string>foodNumEight</string>
-			</array>
-			<array>
-				<string>nav_menu_icon@2x.png</string>
-				<string>天池</string>
-				<string>景区</string>
-				<string>32347293479823479823</string>
-				<string>foodNumNine</string>
-			</array>
-			<array>
-				<string>nav_menu_icon@2x.png</string>
-				<string>天池</string>
-				<string>景区</string>
-				<string>32347293479823479823</string>
-				<string>foodNumTen</string>
 			</array>
 		</array>
 	</dict>
 	<key>keyInfo</key>
 	<dict>
-		<key>景区美景</key>
+		<key> 坐禅谷的美景</key>
 		<array>
-			<string>介绍</string>
-			<string>1123212212312312312312312111111111111111111\n介绍1111111111111111111\n介绍1111111111111111111</string>
+			<string></string>
+			<string>  坐禅谷集瀑布，石奇，潭深，泉涌，崖峭，洞幽于一体，融佛教文化，历史文化，古寨文化和山水景观于一身，构成完整的风景体系。景区内，佛光瀑，莲花瀑，瀑瀑飞泻；千佛崖，面壁崖，崖崖峭力；净心潭，无底潭，潭潭清幽；聚龙湖，红果湾，湖湾醉人；各种水锈石姿态各异，拥有中原地区最大的水锈石群；有明代地理学家徐霞客宣扬的泉涌——龙王泉和唐宣宗赦封通天洞；独有省内佛光瀑布彩虹奇景。景区风光如画，四季宜人，使人目不暇接，流连忘返。</string>
 		</array>
-		<key>景点</key>
+		<key> 景点</key>
 		<array>
 			<array>
-				<string>back.png</string>
-				<string>千佛崖</string>
+				<string>longwangquan.jpg</string>
+				<string>龙王泉</string>
 				<string>景区</string>
-				<string>千佛崖123212212312312312312312\n千佛崖123212212312312312312312\n千佛崖123212212312312312312312</string>
+				<string>  龙王泉是香严寺古八景之一。这股清泉从半山腰涌出，常年奔腾不息，蜿蜒而下，流入谷底。龙王泉平均流量达每秒1立方米。特别神奇的是天越旱水越大，旱情最严重时，曾达到每秒1.5立方米的水量。明代著名地理学家、旅行家徐霞客在《游太和山》日记中写到：“郧县境，乃湖广界，东五里，有池一泓，曰龙泉，上源不见所自来，而下流淙淙，灌地万倾，地又属淅川。”根据他对此泉的描述和所处的地理位置，经专家多次考证，此泉即是龙王泉。</string>
 			</array>
 			<array>
-				<string>nav_menu_icon@2x.png</string>
-				<string>天池</string>
+				<string>pubu.jpg</string>
+				<string>佛光瀑</string>
 				<string>景区</string>
-				<string>32347293479823479823</string>
+				<string>  此瀑长达110 米，高20米，无数道泉水从崖顶的水锈石中涌出，腾空而下，拉出道道瀑布，接着天，连着地，形成“绝壁东西对削，惊涛左右交飞”的奇观。佛光普照是佛光瀑的一大奇观。上午，从下面看，一道彩虹正在头顶。下午，从上面看，一道彩虹正在身边。且人走虹走，人退虹退。</string>
 			</array>
 		</array>
 	</dict>

@@ -46,6 +46,36 @@
 		3C78401717EC1C02005D8A87 /* Sidebar-nav-right-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C78401517EC1C02005D8A87 /* Sidebar-nav-right-button@2x.png */; };
 		3C78401A17EC39C9005D8A87 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C78401817EC39C8005D8A87 /* background.png */; };
 		3C78401B17EC39C9005D8A87 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C78401917EC39C8005D8A87 /* background@2x.png */; };
+		3C84799A17F12F7B00B8594D /* callout_anchor.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C84797E17F12F7B00B8594D /* callout_anchor.png */; };
+		3C84799B17F12F7B00B8594D /* callout_anchor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C84797F17F12F7B00B8594D /* callout_anchor@2x.png */; };
+		3C84799C17F12F7B00B8594D /* callout_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C84798017F12F7B00B8594D /* callout_bg.png */; };
+		3C84799D17F12F7B00B8594D /* callout_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C84798117F12F7B00B8594D /* callout_bg@2x.png */; };
+		3C84799E17F12F7B00B8594D /* callout_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C84798217F12F7B00B8594D /* callout_left.png */; };
+		3C84799F17F12F7B00B8594D /* callout_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C84798317F12F7B00B8594D /* callout_left@2x.png */; };
+		3C8479A017F12F7B00B8594D /* callout_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C84798417F12F7B00B8594D /* callout_right.png */; };
+		3C8479A117F12F7B00B8594D /* callout_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C84798517F12F7B00B8594D /* callout_right@2x.png */; };
+		3C8479A217F12F7B00B8594D /* NAAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C84798717F12F7B00B8594D /* NAAnnotation.m */; };
+		3C8479A317F12F7B00B8594D /* NACallOutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C84798917F12F7B00B8594D /* NACallOutView.m */; };
+		3C8479A417F12F7B00B8594D /* NAMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C84798B17F12F7B00B8594D /* NAMapView.m */; };
+		3C8479A517F12F7B00B8594D /* NAPinAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C84798D17F12F7B00B8594D /* NAPinAnnotationView.m */; };
+		3C8479A617F12F7B00B8594D /* pinGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C84798E17F12F7B00B8594D /* pinGreen.png */; };
+		3C8479A717F12F7B00B8594D /* pinGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C84798F17F12F7B00B8594D /* pinGreen@2x.png */; };
+		3C8479A817F12F7B00B8594D /* pinGreenFloating.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C84799017F12F7B00B8594D /* pinGreenFloating.png */; };
+		3C8479A917F12F7B00B8594D /* pinGreenFloating@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C84799117F12F7B00B8594D /* pinGreenFloating@2x.png */; };
+		3C8479AA17F12F7B00B8594D /* pinPurple.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C84799217F12F7B00B8594D /* pinPurple.png */; };
+		3C8479AB17F12F7B00B8594D /* pinPurple@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C84799317F12F7B00B8594D /* pinPurple@2x.png */; };
+		3C8479AC17F12F7B00B8594D /* pinPurpleFloating.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C84799417F12F7B00B8594D /* pinPurpleFloating.png */; };
+		3C8479AD17F12F7B00B8594D /* pinPurpleFloating@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C84799517F12F7B00B8594D /* pinPurpleFloating@2x.png */; };
+		3C8479AE17F12F7B00B8594D /* pinRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C84799617F12F7B00B8594D /* pinRed.png */; };
+		3C8479AF17F12F7B00B8594D /* pinRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C84799717F12F7B00B8594D /* pinRed@2x.png */; };
+		3C8479B017F12F7B00B8594D /* pinRedFloating.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C84799817F12F7B00B8594D /* pinRedFloating.png */; };
+		3C8479B117F12F7B00B8594D /* pinRedFloating@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C84799917F12F7B00B8594D /* pinRedFloating@2x.png */; };
+		3C8479C417F13A3A00B8594D /* map.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C8479C317F13A3A00B8594D /* map.jpg */; };
+		3C8479C717F13C1100B8594D /* ZCGMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8479C617F13C1100B8594D /* ZCGMapViewController.m */; };
+		3C8479C917F1481600B8594D /* longwangquan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C8479C817F1481600B8594D /* longwangquan.jpg */; };
+		3C8479CB17F14F5B00B8594D /* pubu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C8479CA17F14F5B00B8594D /* pubu.jpg */; };
+		3C8479CD17F15C4F00B8594D /* danjiangyuyan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C8479CC17F15C4F00B8594D /* danjiangyuyan.jpg */; };
+		3C8479CF17F15EED00B8594D /* danjiangguoji.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C8479CE17F15EED00B8594D /* danjiangguoji.jpg */; };
 		3C8C0D7E17EEF4ED00909363 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8C0D7D17EEF4ED00909363 /* AddressBook.framework */; };
 		3C8C0D8017EEF4FF00909363 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8C0D7F17EEF4FF00909363 /* MapKit.framework */; };
 		3C8C0D8617EEF58600909363 /* RWStation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C0D8217EEF58600909363 /* RWStation.m */; };
@@ -125,6 +155,41 @@
 		3C78401517EC1C02005D8A87 /* Sidebar-nav-right-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sidebar-nav-right-button@2x.png"; sourceTree = "<group>"; };
 		3C78401817EC39C8005D8A87 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		3C78401917EC39C8005D8A87 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		3C84797E17F12F7B00B8594D /* callout_anchor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = callout_anchor.png; sourceTree = "<group>"; };
+		3C84797F17F12F7B00B8594D /* callout_anchor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "callout_anchor@2x.png"; sourceTree = "<group>"; };
+		3C84798017F12F7B00B8594D /* callout_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = callout_bg.png; sourceTree = "<group>"; };
+		3C84798117F12F7B00B8594D /* callout_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "callout_bg@2x.png"; sourceTree = "<group>"; };
+		3C84798217F12F7B00B8594D /* callout_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = callout_left.png; sourceTree = "<group>"; };
+		3C84798317F12F7B00B8594D /* callout_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "callout_left@2x.png"; sourceTree = "<group>"; };
+		3C84798417F12F7B00B8594D /* callout_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = callout_right.png; sourceTree = "<group>"; };
+		3C84798517F12F7B00B8594D /* callout_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "callout_right@2x.png"; sourceTree = "<group>"; };
+		3C84798617F12F7B00B8594D /* NAAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAAnnotation.h; sourceTree = "<group>"; };
+		3C84798717F12F7B00B8594D /* NAAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAAnnotation.m; sourceTree = "<group>"; };
+		3C84798817F12F7B00B8594D /* NACallOutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NACallOutView.h; sourceTree = "<group>"; };
+		3C84798917F12F7B00B8594D /* NACallOutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NACallOutView.m; sourceTree = "<group>"; };
+		3C84798A17F12F7B00B8594D /* NAMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAMapView.h; sourceTree = "<group>"; };
+		3C84798B17F12F7B00B8594D /* NAMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAMapView.m; sourceTree = "<group>"; };
+		3C84798C17F12F7B00B8594D /* NAPinAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAPinAnnotationView.h; sourceTree = "<group>"; };
+		3C84798D17F12F7B00B8594D /* NAPinAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAPinAnnotationView.m; sourceTree = "<group>"; };
+		3C84798E17F12F7B00B8594D /* pinGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinGreen.png; sourceTree = "<group>"; };
+		3C84798F17F12F7B00B8594D /* pinGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinGreen@2x.png"; sourceTree = "<group>"; };
+		3C84799017F12F7B00B8594D /* pinGreenFloating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinGreenFloating.png; sourceTree = "<group>"; };
+		3C84799117F12F7B00B8594D /* pinGreenFloating@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinGreenFloating@2x.png"; sourceTree = "<group>"; };
+		3C84799217F12F7B00B8594D /* pinPurple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinPurple.png; sourceTree = "<group>"; };
+		3C84799317F12F7B00B8594D /* pinPurple@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinPurple@2x.png"; sourceTree = "<group>"; };
+		3C84799417F12F7B00B8594D /* pinPurpleFloating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinPurpleFloating.png; sourceTree = "<group>"; };
+		3C84799517F12F7B00B8594D /* pinPurpleFloating@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinPurpleFloating@2x.png"; sourceTree = "<group>"; };
+		3C84799617F12F7B00B8594D /* pinRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinRed.png; sourceTree = "<group>"; };
+		3C84799717F12F7B00B8594D /* pinRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinRed@2x.png"; sourceTree = "<group>"; };
+		3C84799817F12F7B00B8594D /* pinRedFloating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinRedFloating.png; sourceTree = "<group>"; };
+		3C84799917F12F7B00B8594D /* pinRedFloating@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinRedFloating@2x.png"; sourceTree = "<group>"; };
+		3C8479C317F13A3A00B8594D /* map.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = map.jpg; sourceTree = "<group>"; };
+		3C8479C517F13C1100B8594D /* ZCGMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCGMapViewController.h; sourceTree = "<group>"; };
+		3C8479C617F13C1100B8594D /* ZCGMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCGMapViewController.m; sourceTree = "<group>"; };
+		3C8479C817F1481600B8594D /* longwangquan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = longwangquan.jpg; sourceTree = "<group>"; };
+		3C8479CA17F14F5B00B8594D /* pubu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pubu.jpg; sourceTree = "<group>"; };
+		3C8479CC17F15C4F00B8594D /* danjiangyuyan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = danjiangyuyan.jpg; sourceTree = "<group>"; };
+		3C8479CE17F15EED00B8594D /* danjiangguoji.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = danjiangguoji.jpg; sourceTree = "<group>"; };
 		3C8C0D7D17EEF4ED00909363 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		3C8C0D7F17EEF4FF00909363 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3C8C0D8117EEF58600909363 /* RWStation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWStation.h; sourceTree = "<group>"; };
@@ -241,6 +306,8 @@
 		3C39DF8F17D70E7500A31169 /* ZCGService */ = {
 			isa = PBXGroup;
 			children = (
+				3C8479B217F12FB600B8594D /* ZCGMap */,
+				3C84797D17F12F7B00B8594D /* NAMapKit */,
 				3CEAC29117F040FD002A612D /* SBJSON */,
 				3C8C0D7C17EEF4D700909363 /* Map */,
 				3C19E70A17EDB33C00837DD2 /* IntroViewController */,
@@ -336,6 +403,50 @@
 			name = IntroController;
 			sourceTree = "<group>";
 		};
+		3C84797D17F12F7B00B8594D /* NAMapKit */ = {
+			isa = PBXGroup;
+			children = (
+				3C84797E17F12F7B00B8594D /* callout_anchor.png */,
+				3C84797F17F12F7B00B8594D /* callout_anchor@2x.png */,
+				3C84798017F12F7B00B8594D /* callout_bg.png */,
+				3C84798117F12F7B00B8594D /* callout_bg@2x.png */,
+				3C84798217F12F7B00B8594D /* callout_left.png */,
+				3C84798317F12F7B00B8594D /* callout_left@2x.png */,
+				3C84798417F12F7B00B8594D /* callout_right.png */,
+				3C84798517F12F7B00B8594D /* callout_right@2x.png */,
+				3C84798617F12F7B00B8594D /* NAAnnotation.h */,
+				3C84798717F12F7B00B8594D /* NAAnnotation.m */,
+				3C84798817F12F7B00B8594D /* NACallOutView.h */,
+				3C84798917F12F7B00B8594D /* NACallOutView.m */,
+				3C84798A17F12F7B00B8594D /* NAMapView.h */,
+				3C84798B17F12F7B00B8594D /* NAMapView.m */,
+				3C84798C17F12F7B00B8594D /* NAPinAnnotationView.h */,
+				3C84798D17F12F7B00B8594D /* NAPinAnnotationView.m */,
+				3C84798E17F12F7B00B8594D /* pinGreen.png */,
+				3C84798F17F12F7B00B8594D /* pinGreen@2x.png */,
+				3C84799017F12F7B00B8594D /* pinGreenFloating.png */,
+				3C84799117F12F7B00B8594D /* pinGreenFloating@2x.png */,
+				3C84799217F12F7B00B8594D /* pinPurple.png */,
+				3C84799317F12F7B00B8594D /* pinPurple@2x.png */,
+				3C84799417F12F7B00B8594D /* pinPurpleFloating.png */,
+				3C84799517F12F7B00B8594D /* pinPurpleFloating@2x.png */,
+				3C84799617F12F7B00B8594D /* pinRed.png */,
+				3C84799717F12F7B00B8594D /* pinRed@2x.png */,
+				3C84799817F12F7B00B8594D /* pinRedFloating.png */,
+				3C84799917F12F7B00B8594D /* pinRedFloating@2x.png */,
+			);
+			path = NAMapKit;
+			sourceTree = "<group>";
+		};
+		3C8479B217F12FB600B8594D /* ZCGMap */ = {
+			isa = PBXGroup;
+			children = (
+				3C8479C517F13C1100B8594D /* ZCGMapViewController.h */,
+				3C8479C617F13C1100B8594D /* ZCGMapViewController.m */,
+			);
+			name = ZCGMap;
+			sourceTree = "<group>";
+		};
 		3C8C0D7C17EEF4D700909363 /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,7 +462,12 @@
 		3C8C0D8917EF085400909363 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3C8479CE17F15EED00B8594D /* danjiangguoji.jpg */,
+				3C8479CC17F15C4F00B8594D /* danjiangyuyan.jpg */,
+				3C8479C817F1481600B8594D /* longwangquan.jpg */,
+				3C8479C317F13A3A00B8594D /* map.jpg */,
 				3CEAC28D17EFDFA1002A612D /* tianchi1.jpg */,
+				3C8479CA17F14F5B00B8594D /* pubu.jpg */,
 				3CEAC28E17EFDFA1002A612D /* qianfoya1.jpg */,
 				3C19E71017EDB55200837DD2 /* image1@2x.jpg */,
 				3C19E71117EDB55200837DD2 /* image2@2x.jpg */,
@@ -473,36 +589,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C39DF9417D70E7500A31169 /* InfoPlist.strings in Resources */,
+				3C8479B017F12F7B00B8594D /* pinRedFloating.png in Resources */,
+				3C84799F17F12F7B00B8594D /* callout_left@2x.png in Resources */,
+				3C84799E17F12F7B00B8594D /* callout_left.png in Resources */,
 				3C39DF9C17D70E7500A31169 /* Default.png in Resources */,
+				3C8479CD17F15C4F00B8594D /* danjiangyuyan.jpg in Resources */,
+				3C8479CF17F15EED00B8594D /* danjiangguoji.jpg in Resources */,
 				3C39DF9E17D70E7500A31169 /* Default@2x.png in Resources */,
+				3C8479AF17F12F7B00B8594D /* pinRed@2x.png in Resources */,
 				3C39DFA017D70E7500A31169 /* Default-568h@2x.png in Resources */,
+				3C8479AB17F12F7B00B8594D /* pinPurple@2x.png in Resources */,
 				3C39DFB517D70F5100A31169 /* DDMenuController.entitlements in Resources */,
+				3C8479AD17F12F7B00B8594D /* pinPurpleFloating@2x.png in Resources */,
 				3CEAC28C17EFDC96002A612D /* pageViewData.plist in Resources */,
 				3C39DFBC17D7118300A31169 /* nav_menu_icon@2x.png in Resources */,
+				3C84799C17F12F7B00B8594D /* callout_bg.png in Resources */,
 				3C39DFBE17D716E800A31169 /* backGround.jpg in Resources */,
 				3C39DFC117D72CFD00A31169 /* iconbg.png in Resources */,
 				3C39DFC217D72CFD00A31169 /* iconbg@2x.png in Resources */,
 				3CEAC29017EFDFA1002A612D /* qianfoya1.jpg in Resources */,
+				3C8479A717F12F7B00B8594D /* pinGreen@2x.png in Resources */,
+				3C84799B17F12F7B00B8594D /* callout_anchor@2x.png in Resources */,
+				3C8479C417F13A3A00B8594D /* map.jpg in Resources */,
+				3C84799D17F12F7B00B8594D /* callout_bg@2x.png in Resources */,
 				3C39DFC417D7300700A31169 /* Menu.plist in Resources */,
+				3C8479A017F12F7B00B8594D /* callout_right.png in Resources */,
+				3C8479A917F12F7B00B8594D /* pinGreenFloating@2x.png in Resources */,
 				3C39DFF717D9943200A31169 /* bc.jpg in Resources */,
+				3C8479B117F12F7B00B8594D /* pinRedFloating@2x.png in Resources */,
 				3CBB80EB17DDC77200FC1A33 /* back.png in Resources */,
 				3CE73E1C17DF23C10004F63F /* 1.jpg in Resources */,
 				3C8C8F8017E1985800D9F693 /* keyInfo.plist in Resources */,
 				3C8C8F8217E1A12800D9F693 /* keyFood.plist in Resources */,
 				3C8C8F8417E1A5F300D9F693 /* detailInfo.plist in Resources */,
+				3C8479AC17F12F7B00B8594D /* pinPurpleFloating.png in Resources */,
+				3C8479C917F1481600B8594D /* longwangquan.jpg in Resources */,
 				3C8C8F8617E2A47D00D9F693 /* keyHotel.plist in Resources */,
+				3C84799A17F12F7B00B8594D /* callout_anchor.png in Resources */,
+				3C8479AE17F12F7B00B8594D /* pinRed.png in Resources */,
 				3C78401217EC187C005D8A87 /* navbar-bg.png in Resources */,
 				3C78401317EC187C005D8A87 /* navbar-bg@2x.png in Resources */,
+				3C8479A817F12F7B00B8594D /* pinGreenFloating.png in Resources */,
 				3C78401617EC1C02005D8A87 /* Sidebar-nav-right-button.png in Resources */,
 				3C78401717EC1C02005D8A87 /* Sidebar-nav-right-button@2x.png in Resources */,
 				3C78401A17EC39C9005D8A87 /* background.png in Resources */,
 				3C8C0D8817EEF58600909363 /* victoria_line.json in Resources */,
+				3C8479A117F12F7B00B8594D /* callout_right@2x.png in Resources */,
 				3CEAC28F17EFDFA1002A612D /* tianchi1.jpg in Resources */,
 				3C78401B17EC39C9005D8A87 /* background@2x.png in Resources */,
 				3C19E70F17EDB52100837DD2 /* shadow@2x.png in Resources */,
 				3C19E71317EDB55200837DD2 /* image1@2x.jpg in Resources */,
+				3C8479CB17F14F5B00B8594D /* pubu.jpg in Resources */,
 				3C19E71417EDB55200837DD2 /* image2@2x.jpg in Resources */,
 				3C19E71517EDB55200837DD2 /* image3@2x.jpg in Resources */,
+				3C8479A617F12F7B00B8594D /* pinGreen.png in Resources */,
+				3C8479AA17F12F7B00B8594D /* pinPurple.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,10 +656,14 @@
 			files = (
 				3CEAC2A317F0410E002A612D /* SBJsonParser.m in Sources */,
 				3C39DF9617D70E7500A31169 /* main.m in Sources */,
+				3C8479A517F12F7B00B8594D /* NAPinAnnotationView.m in Sources */,
 				3C39DF9A17D70E7500A31169 /* ZCGAppDelegate.m in Sources */,
 				3CEAC29F17F0410E002A612D /* NSObject+SBJSON.m in Sources */,
+				3C8479C717F13C1100B8594D /* ZCGMapViewController.m in Sources */,
+				3C8479A217F12F7B00B8594D /* NAAnnotation.m in Sources */,
 				3C39DFAD17D70F0800A31169 /* DDMenuController.m in Sources */,
 				3C39DFB017D70F1C00A31169 /* LeftController.m in Sources */,
+				3C8479A417F12F7B00B8594D /* NAMapView.m in Sources */,
 				3C8C0D8617EEF58600909363 /* RWStation.m in Sources */,
 				3C39DFB317D70F3700A31169 /* MainViewController.m in Sources */,
 				3C39DFB917D710DD00A31169 /* FeedController.m in Sources */,
@@ -528,6 +673,7 @@
 				3C8C0D8717EEF58600909363 /* MapViewController.m in Sources */,
 				3CEAC2A417F0410E002A612D /* SBJsonWriter.m in Sources */,
 				3CE73E1A17DF11140004F63F /* DetailInfoViewController.m in Sources */,
+				3C8479A317F12F7B00B8594D /* NACallOutView.m in Sources */,
 				3CADB11B17E703F000D0A3D0 /* TableViewController.m in Sources */,
 				3C19E70717EDB13A00837DD2 /* IntroControll.m in Sources */,
 				3CEAC2A117F0410E002A612D /* SBJSON.m in Sources */,

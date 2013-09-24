@@ -65,7 +65,7 @@
 	scrollView_ = [[UIScrollView alloc] initWithFrame:self.view.bounds];
 	
 	//image
-	UIImage *image = [UIImage imageNamed:@"1.jpg"];
+	UIImage *image = [UIImage imageNamed:[NSString stringWithString:[imageArray_ objectAtIndex:0]]];
 	imageView_ = [[UIImageView alloc] initWithImage:image];
 	imageView_.frame = CGRectMake(0, 0, 320, 160);
 	[scrollView_ addSubview:imageView_];
@@ -106,6 +106,11 @@
 	return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section
+{
+	return 0;
+}
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -115,6 +120,23 @@
 		self.locationDelegate = mapController;
 		[self.locationDelegate setValue:title];
 		[self.navigationController pushViewController:mapController animated:YES];
+	}
+	
+	switch (indexPath.row) {
+		case 0:
+			[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://10010"]];
+			break;
+		case 1:{
+			MapViewController *mapController = [[MapViewController alloc] init];
+			self.locationDelegate = mapController;
+			[self.locationDelegate setValue:title];
+			[self.navigationController pushViewController:mapController animated:YES];
+		}
+			break;
+		case 2:
+			break;
+		default:
+			break;
 	}
 }
 - (void)didReceiveMemoryWarning

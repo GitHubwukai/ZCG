@@ -29,14 +29,16 @@
 {
 	NSArray *sectionArray;
 	NSArray *section1Info;
+	NSArray *sectionTools;
 	id controller;
 }
 @synthesize tableView=_tableView;
 
 - (id)init {
     if ((self = [super init])) {
-		sectionArray = [[NSArray alloc] initWithObjects:@"   坐禅谷欢迎你",@"   淅川天气",@"  给点反馈",nil];
-		section1Info = [[NSArray alloc] initWithObjects:@" ",@"坐禅谷旅游", @"地图模式", nil];
+		sectionArray = [[NSArray alloc] initWithObjects:@"   坐禅谷欢迎你",@"   淅川天气预报",@"  工具",nil];
+		section1Info = [[NSArray alloc] initWithObjects:@"坐禅谷旅游", @"地图模式", nil];
+		sectionTools= [[NSArray alloc] initWithObjects:@"关于",@"给此应用程序打分",nil];
     }
     return self;
 }
@@ -106,15 +108,10 @@
     static NSString *CellIdentifier = @"CellIdentifier";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if(cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+									  reuseIdentifier:CellIdentifier];
     }
-    
-    /* 
-     * Content in this cell should be inset the size of kMenuOverlayWidth
-     */
-//	cell.contentView.backgroundColor = [UIColor redColor];
-//	cell.textLabel.font = [UIFont systemFontOfSize:15];
-//	cell.frame = CGRectMake(0, cell.frame.origin.y, 320, cell.frame.size.height);
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if (indexPath.section == 0) {
 		cell.textLabel.text = [section1Info objectAtIndex:indexPath.row];
 		cell.textLabel.textColor = [UIColor blueColor];
@@ -122,13 +119,15 @@
     }
 	else if (indexPath.section == 2)
 		{
-			cell.textLabel.text = @"给我评价哦";
+			cell.textLabel.text = [sectionTools objectAtIndex:indexPath.row];
+			UIFont *font = [UIFont fontWithName:@"Arial" size:15];
+			cell.textLabel.font = font;
 		
 		}
 	else
 		{
-		UIFont *font = [UIFont fontWithName:@"Arial" size:12];
-		UILabel *dataLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, 60, 30)];
+		UIFont *font = [UIFont fontWithName:@"Arial" size:15];
+		UILabel *dataLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 60, 30)];
 		dataLabel.font = font;
 		UILabel *weatherLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 10, 80, 30)];
 		weatherLabel.font =font;
@@ -162,7 +161,9 @@
 	else
 	{
 		NSString *string = [NSString stringWithString:[sectionArray objectAtIndex:section]];
-		UILabel * sectionLabel = [self costumLabel:string andFont:@"Helvetica-Bold" andSizeL:15];
+		UILabel * sectionLabel = [self costumLabel:string
+										   andFont:@"Helvetica-Bold"
+										  andSizeL:13];
 		
 		CGRect frame = sectionLabel.frame;
 		sectionLabel.frame = CGRectMake(12, 8, frame.size.width, frame.size.height);
@@ -200,24 +201,30 @@
 
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    // set the root controller
-    DDMenuController *menuController = (DDMenuController*)((ZCGAppDelegate*)[[UIApplication sharedApplication] delegate]).menuController;
+    if (indexPath.section == 0 || indexPath.section == 2) {
 
-	
-	if ((indexPath.section == 0) && (indexPath.row == 1)) {
-		controller = [[MainViewController alloc] init];
-	}
-	else if((indexPath.section ==0) && (indexPath.row == 2))
-	{
-	controller = [[MapViewController alloc] init];
-	}
-	
-	
-    //controller.title = [NSString stringWithString:[section1Info objectAtIndex:indexPath.row]];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
+		DDMenuController *menuController = (DDMenuController*)((ZCGAppDelegate*)
+															   [[UIApplication sharedApplication] delegate]).menuController;
 
-    [menuController setRootController:navController animated:YES];
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+		
+		if ((indexPath.section == 0) && (indexPath.row == 0)) {
+			controller = [[MainViewController alloc] init];
+		}
+		else if((indexPath.section ==0) && (indexPath.row == 1))
+		{
+		controller = [[MapViewController alloc] init];
+		}
+		
+		
+		//controller.title = [NSString stringWithString:[section1Info objectAtIndex:indexPath.row]];
+		UINavigationController *navController = [[UINavigationController alloc]
+												 initWithRootViewController:controller];
+		[navController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar-bg.png"] forBarMetrics:UIBarMetricsDefault];
+		[menuController setRootController:navController animated:YES];
+		[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	}else{
+	
+	}
     
 }
 
@@ -306,7 +313,8 @@
 	NSDate *now;
 	
     NSDateComponents *comps = [[NSDateComponents alloc] init];
-    NSInteger unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekdayCalendarUnit |
+    NSInteger unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit |
+	NSDayCalendarUnit | NSWeekdayCalendarUnit |
     NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
     now=[NSDate date];
     comps = [calendar components:unitFlags fromDate:now];

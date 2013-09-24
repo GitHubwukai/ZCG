@@ -26,15 +26,15 @@
 	<array>
 		<string>丹江野生鱼</string>
 		<array>
-			<string>2</string>
+			<string>danjiangyuyan.jpg</string>
 			<string>2</string>
 			<string>2</string>
 			<string>2</string>
 		</array>
 		<array>
-			<string>123</string>
-			<string>222</string>
-			<string>333</string>
+			<string>电话：1234567890</string>
+			<string>地址：鹳河路汽运公司对面</string>
+			<string>价格：30-100</string>
 		</array>
 		<array>
 			<string>3</string>
@@ -46,35 +46,15 @@
 	<array>
 		<string>丹江国际宾馆</string>
 		<array>
-			<string>2</string>
-			<string>2</string>
-			<string>2</string>
-			<string>2</string>
+			<string>danjiangguoji.jpg</string>
+			<string></string>
+			<string></string>
+			<string></string>
 		</array>
 		<array>
-			<string>123</string>
-			<string>222</string>
-			<string>333</string>
-		</array>
-		<array>
-			<string>3</string>
-			<string>3</string>
-			<string>3</string>
-		</array>
-	</array>
-	<key>foodNumFour</key>
-	<array>
-		<string>小肥羊</string>
-		<array>
-			<string>2</string>
-			<string>2</string>
-			<string>2</string>
-			<string>2</string>
-		</array>
-		<array>
-			<string>123</string>
-			<string>222</string>
-			<string>333</string>
+			<string>电话：987654321</string>
+			<string>地址：s335直行至丹江国际</string>
+			<string>价格：500-1000</string>
 		</array>
 		<array>
 			<string>3</string>

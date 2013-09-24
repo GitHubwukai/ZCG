@@ -16,6 +16,7 @@
 	NSMutableArray *_stations;
 	NSArray *allStationOrStations;
 	NSDictionary *stationDictionary_;
+	CLLocationCoordinate2D mapCenter_;
 }
 
 typedef NS_ENUM(NSInteger, RWMapMode) {
@@ -79,6 +80,7 @@ typedef NS_ENUM(NSInteger, RWMapMode) {
 	for(RWStation *station in _stations) {
 		if ([station.title isEqualToString:_value]) {
 			allStationOrStations = [[NSArray alloc] initWithObjects:station, nil];
+			mapCenter_ = station.coordinate;
 			}
 		else
 			{
@@ -121,10 +123,17 @@ typedef NS_ENUM(NSInteger, RWMapMode) {
 	self.mapMode = RWMapModeNormal;
 	
 //	CLLocationCoordinate2D center = CLLocationCoordinate2DMake(51.525635, -0.081985);
-	CLLocationCoordinate2D center = CLLocationCoordinate2DMake(32.778561,111.489499);
 	MKCoordinateSpan span = MKCoordinateSpanMake(0.12649, 0.12405);
-	MKCoordinateRegion regionToDisplay = MKCoordinateRegionMake(center, span);
-	[self.mapView setRegion:regionToDisplay animated:NO];
+	if (_value) {
+		MKCoordinateRegion regionToDisplay = MKCoordinateRegionMake(mapCenter_, span);
+		[self.mapView setRegion:regionToDisplay animated:NO];
+	}
+	else
+	{
+		CLLocationCoordinate2D center = CLLocationCoordinate2DMake(32.778561,111.489499);
+		MKCoordinateRegion regionToDisplay = MKCoordinateRegionMake(center, span);
+		[self.mapView setRegion:regionToDisplay animated:NO];
+	}
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation

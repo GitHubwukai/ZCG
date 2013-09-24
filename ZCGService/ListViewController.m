@@ -120,10 +120,10 @@
 		introLabel.lineBreakMode = NSLineBreakByCharWrapping;
 		introLabel.text = tempContentName;
 //		NSLog(@"%@", tempContentName);
-		UIFont *introLabelFont = [UIFont fontWithName:@"Arial" size:14];
+		UIFont *introLabelFont = [UIFont fontWithName:@"Arial" size:12];
 		introLabel.font = introLabelFont;
 		CGSize introLabelSize = [tempContentName sizeWithFont:introLabelFont
-											constrainedToSize:CGSizeMake(290, MAXFLOAT)
+											constrainedToSize:CGSizeMake(304, MAXFLOAT)
 												lineBreakMode:NSLineBreakByCharWrapping];
 		introLabel.frame = CGRectMake(8, nameLabelSize.height+10, introLabelSize.width, introLabelSize.height);
 		
@@ -159,11 +159,12 @@
 	scenicNameLabel.frame = scenicNameLabelFrame;
 	scenicNameLabel.font = [UIFont fontWithName:@"Arial" size:16];
 	
-	CGRect infoLabelFrame = CGRectMake(100, 35, 50, 15);
-	infoLabel.frame = infoLabelFrame;
+//	CGRect infoLabelFrame = CGRectMake(100, 35, 50, 15);
+//	infoLabel.frame = infoLabelFrame;
+	infoLabel.frame = CGRectZero;
 	infoLabel.font = [UIFont fontWithName:@"Arial" size:12];
 	
-	CGRect introduceLabelFrame = CGRectMake(100, 52, 200, 40);
+	CGRect introduceLabelFrame = CGRectMake(100, 34, 200, 55);
 	introduceLabel.frame = introduceLabelFrame;
 	introduceLabel.font = [UIFont fontWithName:@"Arial" size:10];
 	introduceLabel.numberOfLines = 0;
@@ -197,7 +198,7 @@
 #pragma mark - tableview delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-	return 35;
+	return 26;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
